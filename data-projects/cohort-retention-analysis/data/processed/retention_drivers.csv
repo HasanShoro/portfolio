@@ -1,0 +1,7 @@
+segment,customers,retention_6m,retention_12m
+Manual renewal,2404.0,0.4018302828618968,0.2878535773710483
+Auto-renew,2595.0,0.8289017341040462,0.6813102119460501
+Entry starting price,1250.0,0.1896,0.1448
+Lower-mid starting price,1250.0,0.8352,0.6408
+Upper-mid starting price,1249.0,0.77822257806245,0.6301040832666133
+Premium starting price,1250.0,0.6912,0.5528

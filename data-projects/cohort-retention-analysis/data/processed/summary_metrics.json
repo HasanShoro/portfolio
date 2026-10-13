@@ -1,0 +1,8 @@
+{
+  "transactions": 51333,
+  "customers": 4999,
+  "retention_6m": 0.6235247049409882,
+  "retention_12m": 0.4920984196839368,
+  "auto_renew_lift": 42.70714512421494,
+  "retained_value_ratio": 6.2322175732217575
+}

@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hasan Mustafa Shoro — Data & Business Analyst</title>
+  <meta name="description" content="Hasan Mustafa Shoro is a data and business analyst in the Bay Area with a supply chain operations background. Case studies in retail revenue, subscription retention, and marketing ROI.">
+  <meta property="og:title" content="Hasan Mustafa Shoro — Data & Business Analyst">
+  <meta property="og:description" content="Supply chain operations background, analyst toolkit. Case studies in retail revenue, subscription retention, and marketing ROI.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="data-projects/online-retail-analysis/charts/monthly-revenue.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%237a3042%27/%3E%3Ctext x=%2732%27 y=%2742%27 font-family=%27Arial%27 font-weight=%27700%27 font-size=%2728%27 fill=%27white%27 text-anchor=%27middle%27%3EHS%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f7f8f6;
+      --surface: #ffffff;
+      --ink: #15191d;
+      --steel: #5d6872;
+      --rule: #dfe3e5;
+      --maroon: #7a3042;
+      --signal: #e9a227;
+      --board: #1b2128;
+      --board-ink: #e8ece9;
+      --board-dim: #8b97a1;
+      --display: "Bricolage Grotesque", "Instrument Sans", system-ui, sans-serif;
+      --body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font: 400 1.0625rem/1.6 var(--body); -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--signal); outline-offset: 3px; border-radius: 4px; }
+    .wrap { width: min(100% - 32px, 1160px); margin-inline: auto; }
+    h1, h2, h3 { font-family: var(--display); margin: 0; letter-spacing: -0.02em; }
+    h2 { font-size: clamp(2rem, 4.4vw, 3.1rem); line-height: 1.02; font-weight: 800; }
+    h3 { font-size: 1.45rem; line-height: 1.15; font-weight: 700; }
+    p { margin: 0; }
+
+    .site-header { position: sticky; top: 0; z-index: 10; background: rgba(247,248,246,.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule); }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 64px; }
+    .brand { font: 700 1.05rem var(--display); text-decoration: none; letter-spacing: -0.01em; }
+    .nav ul { display: flex; align-items: center; gap: 26px; margin: 0; padding: 0; list-style: none; font-size: .95rem; font-weight: 500; }
+    .nav a { text-decoration: none; color: var(--steel); }
+    .nav a:hover { color: var(--ink); }
+    .nav .nav-cta { color: var(--surface); background: var(--maroon); padding: 8px 16px; border-radius: 8px; }
+    .nav .nav-cta:hover { color: var(--surface); background: #642535; }
+
+    .hero { padding: clamp(48px, 8vw, 96px) 0 clamp(56px, 8vw, 88px); }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
+    .hero h1 { font-size: clamp(2.9rem, 7vw, 5.4rem); line-height: .94; font-weight: 800; letter-spacing: -0.035em; }
+    .hero h1 .role { display: block; margin-top: 14px; font-size: .42em; line-height: 1.15; font-weight: 500; color: var(--maroon); letter-spacing: -0.01em; }
+    .hero-lede { margin-top: 24px; max-width: 34em; font-size: 1.15rem; color: var(--steel); }
+    .hero-lede strong { color: var(--ink); font-weight: 600; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .btn { display: inline-flex; align-items: center; min-height: 46px; padding: 0 20px; border-radius: 8px; font-weight: 600; font-size: .98rem; text-decoration: none; border: 1.5px solid var(--ink); }
+    .btn-primary { background: var(--ink); color: var(--surface); }
+    .btn-primary:hover { background: var(--maroon); border-color: var(--maroon); }
+    .btn-ghost:hover { background: var(--surface); }
+
+    .board { background: var(--board); color: var(--board-ink); border-radius: 14px; padding: 22px 22px 16px; box-shadow: 0 30px 60px -30px rgba(21,25,29,.55); font-family: var(--mono); }
+    .board-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid #333c45; }
+    .board-head h2 { font: 600 .95rem var(--mono); letter-spacing: 0; color: var(--board-ink); }
+    .board-head span { font-size: .78rem; color: var(--board-dim); }
+    .board table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+    .board th { text-align: left; font-weight: 400; color: var(--board-dim); padding: 12px 8px 8px 0; font-size: .74rem; }
+    .board td { padding: 13px 8px 13px 0; border-top: 1px solid #2b333b; vertical-align: top; }
+    .board tr.row { cursor: pointer; }
+    .board tr.row:hover td { background: #222a32; }
+    .board td.ref { color: var(--board-dim); white-space: nowrap; }
+    .board td.q a { color: var(--board-ink); text-decoration: none; font-weight: 600; }
+    .board td.q small { display: block; margin-top: 3px; color: var(--board-dim); font-weight: 400; }
+    .board td.find { color: #c9d1cd; }
+    .status { display: inline-block; padding: 2px 8px; border-radius: 4px; font-size: .72rem; font-weight: 600; white-space: nowrap; font-family: var(--mono); }
+    .status.done { background: #2f4a3a; color: #a9e2bd; }
+    .status.transit { background: #4a3c1d; color: var(--signal); }
+    .board-foot { margin-top: 10px; font-size: .74rem; color: var(--board-dim); }
+    @media (prefers-reduced-motion: no-preference) {
+      .board tbody tr { animation: flip .5s cubic-bezier(.2,.8,.2,1) both; transform-origin: top; }
+      .board tbody tr:nth-child(2) { animation-delay: .12s; }
+      .board tbody tr:nth-child(3) { animation-delay: .24s; }
+      .board tbody tr:nth-child(4) { animation-delay: .36s; }
+      @keyframes flip { from { opacity: 0; transform: rotateX(-80deg); } to { opacity: 1; transform: none; } }
+    }
+
+    section { padding: clamp(64px, 9vw, 104px) 0; }
+    .section-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 32px; align-items: end; margin-bottom: 48px; }
+    .section-head p { color: var(--steel); max-width: 36em; }
+    .band { background: var(--surface); border-block: 1px solid var(--rule); }
+
+    .project { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: clamp(28px, 4vw, 56px); align-items: center; padding: 40px 0; border-top: 1px solid var(--rule); }
+    .project.first { border-top: 0; padding-top: 0; }
+    .project.flip .project-figure { order: 2; }
+    .project-figure { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 14px; }
+    .project-figure img { border-radius: 6px; width: 100%; height: auto; }
+    .project-kind { font-size: .92rem; color: var(--maroon); font-weight: 600; margin-bottom: 10px; }
+    .project h3 { font-size: clamp(1.6rem, 2.6vw, 2.1rem); }
+    .project-summary { margin-top: 14px; color: var(--steel); }
+    .stats { display: flex; flex-wrap: wrap; gap: 28px; margin: 22px 0; padding: 0; list-style: none; }
+    .stats strong { display: block; font: 800 1.7rem/1 var(--display); letter-spacing: -0.02em; }
+    .stats span { font-size: .85rem; color: var(--steel); }
+    .tools { font-size: .9rem; color: var(--steel); }
+    .project .actions { margin-top: 22px; }
+    .project .btn { min-height: 42px; font-size: .92rem; }
+
+    .next-up { margin-top: 24px; display: grid; grid-template-columns: auto 1fr; gap: 20px; align-items: center; padding: 22px 24px; border: 1.5px dashed #c9b27f; border-radius: 12px; background: #fdf8ee; }
+    .next-up .status { background: #f6e5bf; color: #7a5410; }
+    .next-up p { color: var(--steel); }
+    .next-up strong { color: var(--ink); }
+
+    .timeline { list-style: none; margin: 0; padding: 0; border-left: 2px solid var(--rule); }
+    .timeline li { position: relative; padding: 0 0 36px 28px; }
+    .timeline li::before { content: ""; position: absolute; left: -7px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: var(--surface); border: 2px solid var(--maroon); }
+    .timeline li.current::before { background: var(--maroon); }
+    .when { font-size: .9rem; color: var(--steel); }
+    .timeline h3 { margin-top: 4px; }
+    .where { font-weight: 500; }
+    .timeline p.detail { margin-top: 10px; color: var(--steel); max-width: 38em; }
+    .exp-grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); }
+    .exp-grid > div > h2 { margin-bottom: 36px; }
+    .skills h3 { font-size: 1.1rem; margin-bottom: 10px; }
+    .skills ul { margin: 0 0 28px; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+    .skills li { padding: 6px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--surface); font-size: .92rem; }
+    .skills li.learning { border-style: dashed; border-color: #9aa5ae; color: var(--steel); }
+    .skills .legend { font-size: .85rem; color: var(--steel); }
+
+    .films-strip { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(140px, 1fr); gap: 14px; overflow-x: auto; padding-bottom: 10px; scroll-snap-type: x mandatory; }
+    .film { scroll-snap-align: start; text-decoration: none; }
+    .film img { aspect-ratio: 4 / 5; width: 100%; object-fit: cover; border-radius: 8px; }
+    .film strong { display: block; margin-top: 10px; font-weight: 600; font-size: .98rem; }
+    .film span { font-size: .85rem; color: var(--steel); }
+    .film:hover img { filter: brightness(1.08); }
+
+    .contact { background: var(--ink); color: var(--paper); }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(32px, 6vw, 80px); }
+    .contact h2 { color: var(--surface); }
+    .contact p.lede { margin-top: 18px; color: #b9c2c8; max-width: 30em; }
+    .contact-links { margin-top: 28px; display: grid; gap: 10px; font-size: 1.05rem; justify-items: start; }
+    .contact-links a { color: var(--surface); text-underline-offset: 4px; }
+    form { display: grid; gap: 14px; }
+    label { font-size: .9rem; color: #b9c2c8; display: grid; gap: 6px; }
+    input, textarea { width: 100%; font: inherit; color: var(--surface); background: #222930; border: 1px solid #3a434c; border-radius: 8px; padding: 12px 14px; }
+    textarea { min-height: 130px; resize: vertical; }
+    form button { justify-self: start; font: 600 1rem var(--body); min-height: 46px; padding: 0 22px; border: 0; border-radius: 8px; background: var(--signal); color: var(--ink); cursor: pointer; }
+    form button:hover { background: #f3b744; }
+    .form-note { font-size: .9rem; color: #b9c2c8; min-height: 1.4em; }
+
+    footer { padding: 28px 0 40px; font-size: .88rem; color: var(--steel); }
+    footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+
+
+    .resume-grid { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: clamp(32px, 6vw, 80px); align-items: start; }
+    .resume-sheet { display: block; background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: 12px; box-shadow: 0 24px 50px -30px rgba(21,25,29,.45); transform: rotate(-1.2deg); transition: transform .25s ease; }
+    .resume-sheet:hover { transform: rotate(0deg); }
+    .resume-sheet img { width: 100%; height: auto; border-radius: 4px; }
+    .resume-copy p { color: var(--steel); margin-top: 16px; max-width: 34em; }
+    .profiles { list-style: none; margin: 32px 0 0; padding: 0; border-top: 1px solid var(--rule); }
+    .profiles li { border-bottom: 1px solid var(--rule); }
+    .profiles a { display: grid; grid-template-columns: 9.5em 1fr auto; gap: 16px; align-items: baseline; padding: 16px 4px; text-decoration: none; }
+    .profiles a:hover { background: var(--surface); }
+    .profiles .p-name { font-weight: 600; }
+    .profiles .p-handle { color: var(--steel); font-size: .95rem; overflow-wrap: anywhere; }
+    .profiles .p-go { color: var(--maroon); font-weight: 600; font-size: .9rem; }
+    @media (max-width: 900px) { .resume-grid { grid-template-columns: 1fr; } .resume-sheet { max-width: 360px; } }
+    @media (max-width: 560px) { .profiles a { grid-template-columns: 1fr auto; } .profiles .p-handle { grid-column: 1; grid-row: 2; } }
+
+    [hidden] { display: none !important; }
+
+    @media (max-width: 900px) {
+      .hero-grid, .section-head, .project, .exp-grid, .contact-grid { grid-template-columns: 1fr; }
+      .project.flip .project-figure { order: 0; }
+      .nav li.hide-sm { display: none; }
+    }
+    @media (max-width: 560px) {
+      .board { padding: 16px 14px 12px; }
+      .board th.c-find, .board td.find, .board th.c-ref, .board td.ref { display: none; }
+      .next-up { grid-template-columns: 1fr; justify-items: start; }
+      .nav ul { gap: 14px; font-size: .9rem; }
+      .stats { gap: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Primary">
+      <a class="brand" href="#top">Hasan Shoro</a>
+      <ul>
+        <li><a href="#projects">Projects</a></li>
+        <li class="hide-sm"><a href="#experience">Experience</a></li>
+        <li class="hide-sm"><a href="#resume">Résumé</a></li>
+        <li class="hide-sm"><a href="#films">Films</a></li>
+        <li><a class="nav-cta" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <h1>Hasan Mustafa Shoro <span class="role">Data &amp; business analyst</span></h1>
+          <p class="hero-lede">I coordinate operations at <strong>Mosaic Supply Chain</strong>, where I see every day how good data keeps work moving. I use <strong>SQL, Python and Excel</strong> to turn messy records into clear decisions.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#projects">See my projects</a>
+            <a class="btn btn-ghost" data-link="resume" href="#" target="_blank" rel="noopener" hidden>Résumé (PDF)</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="board" role="region" aria-labelledby="board-title">
+          <div class="board-head"><h2 id="board-title">Project manifest</h2><span>Fremont, CA</span></div>
+          <table>
+            <thead><tr><th class="c-ref" scope="col">Ref</th><th scope="col">Question</th><th class="c-find" scope="col">Finding</th><th scope="col">Status</th></tr></thead>
+            <tbody>
+              <tr class="row" data-href="#retail"><td class="ref">RTL-01</td><td class="q"><a href="#retail">What drives online retail revenue?</a><small>541,909 transactions</small></td><td class="find">434 top customers bring in 52% of revenue</td><td><span class="status done">Delivered</span></td></tr>
+              <tr class="row" data-href="#retention"><td class="ref">SUB-02</td><td class="q"><a href="#retention">When do subscribers leave?</a><small>51,333 transactions</small></td><td class="find">Auto-renew keeps 43 pts more customers at month 6</td><td><span class="status done">Delivered</span></td></tr>
+              <tr class="row" data-href="#campaign"><td class="ref">MKT-03</td><td class="q"><a href="#campaign">Which channel earns the next dollar?</a><small>41,188 contacts</small></td><td class="find">Cellular converts 14.7% vs 5.2% by phone</td><td><span class="status done">Delivered</span></td></tr>
+              <tr class="row" data-href="#next"><td class="ref">LOG-04</td><td class="q"><a href="#next">Why do shipments arrive late?</a><small>SQL and Power BI</small></td><td class="find">Analysis underway</td><td><span class="status transit">In transit</span></td></tr>
+            </tbody>
+          </table>
+          <p class="board-foot">Select a row to jump to that project.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="band">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Analytics projects</h2>
+          <p>Each one starts with a business question and a public dataset, and ends with charts and recommendations a manager could act on. Code and cleaning steps are included.</p>
+        </div>
+
+        <article class="project first" id="retail">
+          <div class="project-figure"><img src="data-projects/online-retail-analysis/charts/monthly-revenue.png" alt="Line chart of monthly revenue peaking at £1.5M in November 2011" loading="lazy"></div>
+          <div>
+            <p class="project-kind">Business analysis</p>
+            <h3>What drives online retail revenue?</h3>
+            <p class="project-summary">Cleaned a UK retailer’s full transaction history, then broke revenue down by season, product, country and customer group to find where the business should focus next.</p>
+            <ul class="stats">
+              <li><strong>£10.7M</strong><span>revenue analyzed</span></li>
+              <li><strong>19,960</strong><span>orders</span></li>
+              <li><strong>52%</strong><span>of revenue from top customers</span></li>
+            </ul>
+            <p class="tools">Python, pandas, Matplotlib, RFM segmentation</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="data-projects/online-retail-analysis/report/index.html">Read case study</a>
+              <a class="btn btn-ghost" data-link="code-retail" href="#" hidden>View code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project flip" id="retention">
+          <div class="project-figure"><img src="data-projects/cohort-retention-analysis/charts/retention-curve.png" alt="Retention curves showing auto-renew customers staying far longer than manual-renewal customers" loading="lazy"></div>
+          <div>
+            <p class="project-kind">Product analytics</p>
+            <h3>When do subscribers leave?</h3>
+            <p class="project-summary">Built monthly cohorts for 4,999 subscribers to see when customers drop off, and which factors, like auto-renew and starting price, go with longer retention.</p>
+            <ul class="stats">
+              <li><strong>62.4%</strong><span>still active at month 6</span></li>
+              <li><strong>49.2%</strong><span>at month 12</span></li>
+              <li><strong>+42.7 pts</strong><span>auto-renew advantage</span></li>
+            </ul>
+            <p class="tools">Python, pandas, cohort analysis, heatmaps</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="data-projects/cohort-retention-analysis/report/index.html">Read case study</a>
+              <a class="btn btn-ghost" data-link="code-retention" href="#" hidden>View code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project" id="campaign">
+          <div class="project-figure"><img src="data-projects/marketing-campaign-analysis/charts/conversion-funnel.png" alt="Funnel chart narrowing from 41,188 contacts to 4,640 conversions" loading="lazy"></div>
+          <div>
+            <p class="project-kind">Marketing analytics</p>
+            <h3>Which channel earns the next dollar?</h3>
+            <p class="project-summary">Mapped a bank’s campaign funnel, compared cellular and telephone outreach, found the audiences that respond best, and modeled where to move budget.</p>
+            <ul class="stats">
+              <li><strong>41,188</strong><span>contacts</span></li>
+              <li><strong>11.3%</strong><span>conversion rate</span></li>
+              <li><strong>14.7% vs 5.2%</strong><span>cellular vs telephone</span></li>
+            </ul>
+            <p class="tools">Python, pandas, funnel analysis, ROI modeling</p>
+            <div class="actions">
+              <a class="btn btn-primary" href="data-projects/marketing-campaign-analysis/report/index.html">Read case study</a>
+              <a class="btn btn-ghost" data-link="code-campaign" href="#" hidden>View code</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="next-up" id="next">
+          <span class="status transit">In transit</span>
+          <p><strong>Next: a shipment delay analysis in SQL and Power BI.</strong> Built from what I see at work: which carriers, routes and days cause late deliveries, and what those delays cost.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="wrap exp-grid">
+        <div>
+          <h2>Experience</h2>
+          <ol class="timeline">
+            <li class="current">
+              <p class="when">Nov 2025 – present</p>
+              <h3>Operations Coordinator &amp; Dispatcher</h3>
+              <p class="where">Mosaic Supply Chain, San Jose, CA</p>
+              <p class="detail">Coordinate dispatch, scheduling and day-to-day logistics. Working where shipments, drivers and customers meet shows me where processes break, and why clear reporting matters.</p>
+            </li>
+            <li>
+              <p class="when">Independent work</p>
+              <h3>Data analytics portfolio</h3>
+              <p class="detail">Three end-to-end case studies in Python covering revenue, retention and marketing ROI, plus a personal finance tracker web app built on Supabase.</p>
+            </li>
+            <li>
+              <p class="when">Education</p>
+              <h3>B.S. Information Technology</h3>
+              <p class="where">University of Sindh</p>
+              <p class="detail">Also: Project Management Fundamentals and Agile PM Fundamentals, UCSC Silicon Valley Extension.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="skills">
+          <h2>Skills</h2>
+          <h3>Analysis</h3>
+          <ul><li>SQL</li><li>Python</li><li>pandas</li><li>Excel</li><li>Matplotlib</li><li class="learning">Power BI</li></ul>
+          <h3>Methods</h3>
+          <ul><li>Data cleaning</li><li>Cohort analysis</li><li>Customer segmentation</li><li>KPI reporting</li><li>Funnel analysis</li></ul>
+          <h3>Operations</h3>
+          <ul><li>Dispatch and scheduling</li><li>Supply chain coordination</li><li>Process improvement</li><li>Stakeholder communication</li></ul>
+          <h3>Languages</h3>
+          <ul><li>English</li><li>Urdu</li><li>Sindhi</li></ul>
+          <p class="legend">Dashed outline: currently learning.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="resume" class="band">
+      <div class="wrap resume-grid">
+        <a class="resume-sheet" href="resume/Hasan-Shoro-Resume.pdf" target="_blank" rel="noopener" aria-label="Open résumé PDF"><img src="resume/resume-thumb.png" alt="First page of Hasan Mustafa Shoro’s résumé" width="510" height="660" loading="lazy"></a>
+        <div class="resume-copy">
+          <h2>Résumé &amp; profiles</h2>
+          <p>One page covering my operations work at Mosaic Supply Chain, my analytics projects and my skills. Updated October 2026.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="resume/Hasan-Shoro-Resume.pdf" download>Download résumé (PDF)</a>
+            <a class="btn btn-ghost" href="resume/Hasan-Shoro-Resume.pdf" target="_blank" rel="noopener">View in browser</a>
+          </div>
+          <ul class="profiles">
+            <li><a href="https://www.linkedin.com/in/hasan-mustafa-shoro/" target="_blank" rel="noreferrer"><span class="p-name">LinkedIn</span><span class="p-handle">linkedin.com/in/hasan-mustafa-shoro</span><span class="p-go">Connect</span></a></li>
+            <li><a href="https://github.com/HasanShoro" target="_blank" rel="noreferrer"><span class="p-name">GitHub</span><span class="p-handle">github.com/HasanShoro</span><span class="p-go">See code</span></a></li>
+            <li><a href="https://hasanshoro.github.io/finance-tracker/" target="_blank" rel="noreferrer"><span class="p-name">Finance tracker</span><span class="p-handle">Live web app I built with Supabase</span><span class="p-go">Open app</span></a></li>
+            <li><a href="mailto:hmshoro@gmail.com"><span class="p-name">Email</span><span class="p-handle">hmshoro@gmail.com</span><span class="p-go">Write</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="films">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Outside work, I make films</h2>
+          <p>Short visual stories I shoot and edit in DaVinci Resolve and Final Cut Pro. Same habit as analysis: find the pattern, cut what doesn’t matter.</p>
+        </div>
+        <div class="films-strip">
+          <a class="film" href="https://www.instagram.com/reel/DUyGhn1EfoD/" target="_blank" rel="noreferrer"><img src="assets/instagram/featured-reel.jpg" alt="Still from Perspective" loading="lazy"><strong>Perspective</strong><span>Feb 2026</span></a>
+          <a class="film" href="https://www.instagram.com/reel/DTIh1bvEeRk/" target="_blank" rel="noreferrer"><img src="assets/instagram/world-persists.jpg" alt="Still from The World Persists" loading="lazy"><strong>The World Persists</strong><span>Jan 2026</span></a>
+          <a class="film" href="https://www.instagram.com/reel/DS5C3AVEw0k/" target="_blank" rel="noreferrer"><img src="assets/instagram/december.jpg" alt="Still from December" loading="lazy"><strong>December</strong><span>Dec 2025</span></a>
+          <a class="film" href="https://www.instagram.com/reel/DQE_vxljuYF/" target="_blank" rel="noreferrer"><img src="assets/instagram/lost.jpg" alt="Still from Lost" loading="lazy"><strong>Lost</strong><span>Oct 2025</span></a>
+          <a class="film" href="https://www.instagram.com/reel/DQSQGcWkuRd/" target="_blank" rel="noreferrer"><img src="assets/instagram/what-you-give.jpg" alt="Still from What You Give" loading="lazy"><strong>What You Give</strong><span>Oct 2025</span></a>
+          <a class="film" href="https://www.instagram.com/reel/DP_nOpwEf2B/" target="_blank" rel="noreferrer"><img src="assets/instagram/ocean-glitter.jpg" alt="Still from The Ocean Glittered" loading="lazy"><strong>The Ocean Glittered</strong><span>Oct 2025</span></a>
+          <a class="film" href="https://www.instagram.com/reel/DOY9vfcD4Yo/" target="_blank" rel="noreferrer"><img src="assets/instagram/day-in-sf.jpg" alt="Still from A Day in SF" loading="lazy"><strong>A Day in SF</strong><span>Sep 2025</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Hiring an analyst?</h2>
+          <p class="lede">I’m looking for data analyst, business analyst and operations analyst roles in the Bay Area or remote. Send a note and I’ll reply within a day.</p>
+          <div class="contact-links">
+            <a href="mailto:hmshoro@gmail.com">hmshoro@gmail.com</a>
+            <a data-link="linkedin" href="#" target="_blank" rel="noreferrer" hidden>LinkedIn</a>
+            <a data-link="github" href="#" target="_blank" rel="noreferrer" hidden>GitHub</a>
+          </div>
+        </div>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/?sent=1#contact">
+          <input type="hidden" name="form-name" value="contact">
+          <p hidden><label>Leave this empty <input name="bot-field"></label></p>
+          <label>Your name<input type="text" name="name" autocomplete="name" required></label>
+          <label>Your email<input type="email" name="email" autocomplete="email" required></label>
+          <label>Message<textarea name="message" required></textarea></label>
+          <button type="submit">Send message</button>
+          <p class="form-note" id="form-note" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap"><span>© <span id="year">2026</span> Hasan Mustafa Shoro</span><a href="#top">Back to top</a></div>
+  </footer>
+
+  <script>
+    // Add a URL here to show the matching button or link. Empty means hidden.
+    const LINKS = {
+      resume: 'resume/Hasan-Shoro-Resume.pdf',
+      linkedin: 'https://www.linkedin.com/in/hasan-mustafa-shoro/',
+      github: 'https://github.com/HasanShoro',
+      'code-retail': 'https://github.com/HasanShoro/portfolio/tree/main/data-projects/online-retail-analysis',
+      'code-retention': 'https://github.com/HasanShoro/portfolio/tree/main/data-projects/cohort-retention-analysis',
+      'code-campaign': 'https://github.com/HasanShoro/portfolio/tree/main/data-projects/marketing-campaign-analysis'
+    };
+    document.querySelectorAll('[data-link]').forEach((el) => {
+      const url = LINKS[el.dataset.link];
+      if (url) { el.href = url; el.hidden = false; }
+    });
+    document.querySelectorAll('.board tr.row').forEach((row) => {
+      row.addEventListener('click', (e) => { if (e.target.tagName !== 'A') location.hash = row.dataset.href; });
+    });
+    document.getElementById('year').textContent = new Date().getFullYear();
+    if (new URLSearchParams(location.search).has('sent')) {
+      document.getElementById('form-note').textContent = 'Message sent. I’ll reply soon.';
+    }
+  </script>
+</body>
+</html>

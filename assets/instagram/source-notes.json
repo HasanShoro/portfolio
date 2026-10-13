@@ -1,0 +1,21 @@
+{
+  "source": "Instagram Graph API via the user's connected Instagram account",
+  "updated": "2026-07-21",
+  "delivery": "Local thumbnails with links to original Instagram Reels; video files were not duplicated.",
+  "selected": [
+    {"title":"Perspective","shortcode":"DUyGhn1EfoD","published":"2026-02-15","likes_at_selection":107813},
+    {"title":"The World Persists","shortcode":"DTIh1bvEeRk","published":"2026-01-05","likes_at_selection":138},
+    {"title":"Lost","shortcode":"DQE_vxljuYF","published":"2025-10-21","likes_at_selection":204},
+    {"title":"A Day in SF","shortcode":"DOY9vfcD4Yo","published":"2025-09-09","likes_at_selection":188},
+    {"title":"December","shortcode":"DS5C3AVEw0k","published":"2025-12-30","caption":"december."},
+    {"title":"What You Give","shortcode":"DQSQGcWkuRd","published":"2025-10-26","caption":"what you give, comes back to you…"},
+    {"title":"The Ocean Glittered","shortcode":"DP_nOpwEf2B","published":"2025-10-19","caption":"the ocean decided to glitter today."}
+  ],
+  "skipped": [
+    "July, June, May, April, and February image/carousel posts because the requested showcase is video-focused.",
+    "Other Reels to keep this pass limited to three additions and preserve the main gallery hierarchy.",
+    "Perspective, The World Persists, Lost, and A Day in SF because they were already imported.",
+    "Direct video downloads because source links preserve Instagram playback, audio, attribution, and rights context."
+  ],
+  "manual_review": "Confirm the editorial title 'Perspective' for the captionless featured Reel; replace it if a preferred title exists."
+}
